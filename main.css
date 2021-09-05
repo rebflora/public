@@ -1,0 +1,254 @@
+:root {
+    --green: #65cc00;
+    --gold: #e5c100;
+    --black: #000000;
+    --gray: #696969;
+    --purple: #990099;
+    --red: #800000;
+  }
+
+  * {
+    font-family: helvetica;
+  }
+  body { 
+     color: var(--fontColor);
+     background: var(--bg);
+     margin: 20px;
+  }
+  body a {
+    font-size: 18px;
+    color: var(--bodyLinkColor); 
+    text-decoration: none;
+  }
+  
+  body a:hover {
+    color: var(--bodyHoverColor);
+    text-decoration: underline;
+  }
+
+li {
+    margin-right: 3px;
+    list-style-position: inside;
+    list-style: none;
+  }
+  
+  .list {
+    list-style: square;
+  }
+
+  .list-2 {
+    list-style: circle;
+  }
+
+  .container {
+    width: 100%;
+    position: relative;
+    border: 1px solid transparent;
+  }
+
+  header {
+    margin: 0;
+    padding: 2px; 
+    height: 14rem;
+    border: 1px solid #000000;
+    text-align: center;
+    background-image: url("./images/Apple_shreds.jpg");
+  } 
+
+  .site-logo {
+    margin-left: 0px;
+    padding: 0px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .nav-background {
+    background-color: transparent;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #998100;
+}
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+  
+.nav-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: var(--navFontColor);
+} 
+  
+.nav-link:hover {
+    color: var(--navAHoverColor);
+    background-color: black;
+    text-decoration: underline;
+}
+
+.nav-link:visited {
+  color: #990099;
+} 
+
+@media only screen and (max-width: 850px) {
+  .nav-menu {
+      position: fixed;
+      right: -150%;
+      top: 0;
+      padding: 1rem 1.5rem;
+      flex-direction: column;
+      background-color: #193300;
+      width: 40%;
+      border-radius: 1px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+          0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+      right: 0;
+  }
+
+  .nav-item {
+     margin: -1rem 0;
+     margin-top: 2rem;
+     
+      
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+main {
+    margin: 0;
+    padding: 2rem;
+    padding-right: 3rem;
+    background-color: #7f7f7f1f;
+  }
+
+.section-1 {
+    text-align: center;
+    color: #4c9900;
+    padding: 5px;
+    overflow: hidden;
+ }
+
+article {
+    padding: 1rem;
+    color: var(--articleFontColor);
+    overflow: hidden;
+ }
+
+ 
+ 
+ .section-2 {
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  color: #326600;
+  margin: 0px;
+  padding: 1rem;
+  padding-right: 8rem;
+  left: 0px;
+  overflow: hidden;
+}
+
+footer {
+    font-size: small; 
+    margin: 0;
+    position:relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: "100%";
+    display: flex;
+    padding: 10px;
+    color: #696969;
+    background-color: #360000;
+  }
+
+  .light-theme {
+    --bg: var(--gold);
+    --fontColor: var(--black);
+    --btnBg: var(--green);
+    --btnFontColor: var(--black);
+    --navFontColor: var(--gold);
+    --navAHoverColor: var(--green);
+    --bodyLinkColor: var(--red);
+    --bodyHoverColor: var(--black);
+  }
+  .dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--black);
+    --btnFontColor: var(--gold);
+    --navFontColor: var(--gray);
+    --navAHoverColor: var(--gold);
+    --articleFontColor: var(--purple);
+    --bodyLinkColor: var(--red);
+    --bodyHoverColor: var(--gold);
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn {
+    font-family: sans-serif;
+    font-size: large;
+    font-weight: bold;
+    position: absolute;
+    margin: 5px 5px;
+    left: 1.5rem;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #4c9900;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+  }
+
+  
+
+  
