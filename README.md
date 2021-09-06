@@ -1,7 +1,7 @@
 # public
 This project is about making simple website codes available and putting them on display as a webpage.
 
-View this website <a href="https://dev.rebekahflora.com">Here</a>
+View this website <a href="https://dev.rebekahflora.com/about.html">Here</a>
 
 References:
 
