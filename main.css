@@ -116,8 +116,8 @@ li {
   .nav-menu {
       position: fixed;
       right: -150%;
-      top: 0;
-      padding: 1rem 1.5rem;
+      top: 120px;
+      padding: 0 0;
       flex-direction: column;
       background-color: #193300;
       width: 40%;
@@ -133,8 +133,8 @@ li {
   }
 
   .nav-item {
-     margin: -1rem 0;
-     margin-top: 2rem;
+     margin: 0px 0;
+     margin-top: 0px;
      
       
   }
@@ -151,11 +151,11 @@ li {
 }
 
 .hamburger.active .bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(10px) rotate(45deg);
 }
 
 .hamburger.active .bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-10px) rotate(-45deg);
 }
 
 main {
