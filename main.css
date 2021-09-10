@@ -249,6 +249,10 @@ footer {
     background-color: var(--btnBg);
   }
 
+  .btn:focus { 
+    outline-style: none; 
+  }
+
   
 
   
