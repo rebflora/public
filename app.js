@@ -1,7 +1,7 @@
 'use strict'
 
 const switcher = document.querySelector('.btn');
-switcher.addEventListener('click', function() {
+switcher.addEventListener('click', function () {
     document.body.classList.toggle('dark-theme')
 
 
@@ -16,12 +16,16 @@ switcher.addEventListener('click', function() {
     }
 
     console.log('current class name: ' + className);
-
-    myStorage = window.localStorage;
-    localStorage.setItem("theme", className);
-    localStorage.getItem("theme");
-    
+    localStorage.setItem('theme', className);
 }); 
+
+const currentTheme = localStorage.getItem("theme") || "light-theme";
+
+if (currentTheme == "light-theme dark-theme") {
+  document.body.classList.toggle("dark-theme");
+
+  switcher.innerText = currentTheme === 'light-theme' ? 'Dark' : 'Light';
+}
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
