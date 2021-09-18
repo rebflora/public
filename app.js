@@ -6,17 +6,22 @@ switcher.addEventListener('click', function() {
 
 
     var className = document.body.className;
+    
     if(className == "light-theme") {
         this.textContent = "Dark";
+        
     }
     else {
         this.textContent = "Light";
     }
 
     console.log('current class name: ' + className);
+
+    myStorage = window.localStorage;
+    localStorage.setItem("theme", className);
+    localStorage.getItem("theme");
     
-    
-});
+}); 
 
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
