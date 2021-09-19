@@ -373,7 +373,7 @@ function switchTheme(e) {
   }
 }
 
-const currentTheme = localStorage.getItem("theme");
+const currentTheme = localStorage.getItem("theme") || "light-theme";
 
 if (currentTheme) {
   
