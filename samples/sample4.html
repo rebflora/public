@@ -12,8 +12,9 @@
     --gold: #e5c100;
     --black: #000000;
     --gray: #696969;
-    --purple: #990099;
+    --purple: #7f007f;
     --red: #800000;
+    --darkgold: #665600;
   }
 
   * {
@@ -70,6 +71,7 @@ li {
     font-family: Vivaldi;
     font-size: medium;
     font-weight: bolder;
+    font-style: italic;
   }
 
   .navbar {
@@ -121,7 +123,7 @@ li {
 }
 
 .nav-link:visited {
-  color: #990099;
+  color: var(--purple);
 } 
 
 @media only screen and (max-width: 850px) {
@@ -216,7 +218,7 @@ footer {
     --fontColor: var(--black);
     --btnB: var(--gold);
     --btnColor: var(--black);
-    --navFontColor: var(--gold);
+    --navFontColor: var(--darkgold);
     --navAHoverColor: var(--green);
     --bodyLinkColor: var(--red);
     --bodyHoverColor: var(--black);
@@ -228,7 +230,6 @@ footer {
     --btnColor: var(--gold);
     --navFontColor: var(--gray);
     --navAHoverColor: var(--gold);
-    --articleFontColor: var(--purple);
     --bodyLinkColor: var(--red);
     --bodyHoverColor: var(--gold);
   }
@@ -267,7 +268,7 @@ footer {
   right: 0;
   top: 0;
   transition: 0.4s;
-  border-radius: 20px;
+  border-radius: 34px;
 }
 .slider:before {
   background-color: var(--btnColor);
@@ -302,7 +303,7 @@ input:checked + .slider:before {
       <nav class="navbar nav-background">
         <div class="logo">
           Sample
-          <span style= "font-size: x-large;"><b>Sample</b></span>
+          <span style= "font-size: x-large; font-style: normal;"><b>Sample</b></span>
         </div>  
         <ul class="nav-menu">
           <li class="nav-item"><a href="https://dev.rebekahflora.com/samples/sample4.html" class="nav-link">Here</a></li>
@@ -310,7 +311,8 @@ input:checked + .slider:before {
           <li class="nav-item"><a href="#" class="nav-link">Nowhere</a></li>
           <li class="nav-item"><a href="https://www.rebekahflora.com" class="nav-link">Somewhere</a></li>
           <li class="nav-item"><a href="https://github.com/rebflora/public/blob/main/samples/sample4.html" class="nav-link">Grab Code</a></li>
-       </ul>
+          <li class="nav-item"><a href="https://dev.rebekahflora.com" class="nav-link">Main Page</a></li>
+        </ul>
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
@@ -331,11 +333,11 @@ input:checked + .slider:before {
       </header>
       
       <main>
-     <section class="section-1"><h2>About</h2>
+     <section class="section-1"><h2>Sample 4</h2>
       <p id="msg"></p>
     </section>
     <section class="section-2">
-      <p><b>This website has its style and script within the html. And its navbar content are external links because there is no folder content to refer to; as there is no folder or directory but just the html file. If what you want is to be able to link pages within a website, then this website's code is not what you need. You need the code of the main page or home page.</b></p>
+      <p><b>This website has its style and script within the html. And its navbar content are external links because there is no folder content to refer to; no extra pages were created. If what you want is to be able to link pages within a website, then this website's code is not what you need. You need the code of the main page or home page.</b></p>
       <p>The dark/light mode switcher style is different from the main page. If you want the main page, but with this dark/light mode switcher...now you want more, which entails you edit it, or pay a professional web developer/designer.</p>
          <br>
         <p style="font-size: 20px; font-weight: bold;">Cheers</p>
@@ -355,15 +357,6 @@ input:checked + .slider:before {
 function switchTheme(e) {
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark-theme");
-  } else {
-    document.documentElement.setAttribute("data-theme", "light-theme");
-  }
-}
-themeToggle.addEventListener("change", switchTheme, false);
-
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark-theme");
     
     localStorage.setItem("theme", "dark-theme");
   } else {
@@ -372,6 +365,8 @@ function switchTheme(e) {
     localStorage.setItem("theme", "light-theme");
   }
 }
+
+themeToggle.addEventListener("change", switchTheme, false);
 
 const currentTheme = localStorage.getItem("theme") || "light-theme";
 
