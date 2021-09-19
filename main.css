@@ -159,6 +159,7 @@ li {
 }
 
 main {
+    line-height: 23px;
     margin: 0;
     padding: 2rem;
     padding-right: 4rem;

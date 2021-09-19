@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample</title>
+    <link rel="icon" href="#" type="image/png">
+    <style>
+:root {
+    --green: #65cc00;
+    --gold: #e5c100;
+    --black: #000000;
+    --gray: #696969;
+    --purple: #990099;
+    --red: #800000;
+  }
+
+  * {
+    font-family: helvetica;
+  }
+  body { 
+     color: var(--fontColor);
+     background: var(--bg);
+     margin: 20px;
+  }
+  body a {
+    font-size: 18px;
+    color: var(--bodyLinkColor); 
+    text-decoration: none;
+  }
+  
+  body a:hover {
+    color: var(--bodyHoverColor);
+    text-decoration: underline;
+  }
+
+li {
+    margin-right: 3px;
+    list-style-position: inside;
+    list-style: none;
+  }
+  
+  .list {
+    list-style: square;
+  }
+
+  .list-2 {
+    list-style: circle;
+  }
+
+  .container {
+    width: 100%;
+    position: relative;
+    border: 1px solid transparent;
+  }
+
+  header {
+    margin: 0;
+    padding: 2px; 
+    height: 14rem;
+    border: 1px solid transparent;
+    text-align: center;
+    background-color: #7f6c002f;
+  } 
+
+  .logo {
+    margin-left: 0px;
+    padding: 0px;
+    font-family: Vivaldi;
+    font-size: medium;
+    font-weight: bolder;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .nav-background {
+    background-color: transparent;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .bar {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #998100;
+}
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+  margin-left: 2rem;
+}
+  
+.nav-link {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 14px 16px;
+    color: var(--navFontColor);
+} 
+  
+.nav-link:hover {
+    color: var(--navAHoverColor);
+    background-color: black;
+    text-decoration: underline;
+}
+
+.nav-link:visited {
+  color: #990099;
+} 
+
+@media only screen and (max-width: 850px) {
+  .nav-menu {
+      position: fixed;
+      right: -150%;
+      top: 120px;
+      padding: 0 0;
+      flex-direction: column;
+      background-color: #193300;
+      width: 40%;
+      border-radius: 1px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+          0 10px 27px rgba(0, 0, 0, 0.05);
+  }
+
+  .nav-menu.active {
+      right: 0;
+  }
+
+  .nav-item {
+     margin: 0px 0;
+     margin-top: 0px;
+     
+      
+  }
+
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+main {
+    line-height: 23px;
+    margin: 0;
+    padding: 2rem;
+    padding-right: 4rem;
+    background-color: #7f7f7f1f;
+  }
+
+.section-1 {
+    text-align: center;
+    color: #4c9900;
+    padding: 5px;
+    overflow: hidden;
+ }
+ 
+ .section-2 {
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+  color: #326600;
+  margin: 0px;
+  padding: 1rem;
+  padding-right: 5px;
+  left: 0px;
+  overflow: hidden;
+}
+
+footer {
+    font-size: small; 
+    margin: 0;
+    position:relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: "100%";
+    display: flex;
+    padding: 10px;
+    color: #696969;
+    background-color: #360000;
+  }
+
+  [data-theme="light-theme"] {
+    --bg: var(--gold);
+    --fontColor: var(--black);
+    --btnB: var(--gold);
+    --btnColor: var(--black);
+    --navFontColor: var(--gold);
+    --navAHoverColor: var(--green);
+    --bodyLinkColor: var(--red);
+    --bodyHoverColor: var(--black);
+  }
+  [data-theme="dark-theme"] {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnB: var(--gray);
+    --btnColor: var(--gold);
+    --navFontColor: var(--gray);
+    --navAHoverColor: var(--gold);
+    --articleFontColor: var(--purple);
+    --bodyLinkColor: var(--red);
+    --bodyHoverColor: var(--gold);
+  }
+
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+}
+.theme-switch-wrapper em {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+  top: 3rem;
+  left: 1.5rem;
+}
+.theme-switch input {
+  display: none;
+}
+.slider {
+  background-color: #7f6b00;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+.slider:before {
+  background-color: var(--btnColor);
+  bottom: 4px;
+  content: "";
+  height: 22px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--btnB);
+}
+input:checked + .slider {
+  background-color: #7f7f7f;
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+    </style>
+
+</head>
+<body>
+
+  <body class="light-theme">
+
+    <div class="container">
+    
+    <header>
+      <nav class="navbar nav-background">
+        <div class="logo">
+          Sample
+          <span style= "font-size: x-large;"><b>Sample</b></span>
+        </div>  
+        <ul class="nav-menu">
+          <li class="nav-item"><a href="https://dev.rebekahflora.com/samples/sample4.html" class="nav-link">Here</a></li>
+          <li class="nav-item"><a href="https://dev.rebekahflora.com/samples" class="nav-link">Samples</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Nowhere</a></li>
+          <li class="nav-item"><a href="https://www.rebekahflora.com" class="nav-link">Somewhere</a></li>
+          <li class="nav-item"><a href="https://github.com/rebflora/public/blob/main/samples/sample4.html" class="nav-link">Grab Code</a></li>
+       </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </div>
+      </nav>
+
+      <div class="clearfix">
+        <div class="theme-switch-wrapper">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider">
+            </div>
+          </label>
+        </div>
+      </div>
+      <h1>Exploration</h1>
+      </header>
+      
+      <main>
+     <section class="section-1"><h2>About</h2>
+      <p id="msg"></p>
+    </section>
+    <section class="section-2">
+      <p><b>This website has its style and script within the html. And its navbar content are external links because there is no folder content to refer to; as there is no folder or directory but just the html file. If what you want is to be able to link pages within a website, then this website's code is not what you need. You need the code of the main page or home page.</b></p>
+      <p>The dark/light mode switcher style is different from the main page. If you want the main page, but with this dark/light mode switcher...now you want more, which entails you edit it, or pay a professional web developer/designer.</p>
+         <br>
+        <p style="font-size: 20px; font-weight: bold;">Cheers</p>
+      </br>
+      </section>
+  
+  </main>
+    
+    <footer>Copyright &copy; Rebekah-Flora</footer>
+    <script>
+      'use strict'
+
+      const themeToggle = document.querySelector(
+  '.theme-switch input[type="checkbox"]'
+);
+
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark-theme");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light-theme");
+  }
+}
+themeToggle.addEventListener("change", switchTheme, false);
+
+function switchTheme(e) {
+  if (e.target.checked) {
+    document.documentElement.setAttribute("data-theme", "dark-theme");
+    
+    localStorage.setItem("theme", "dark-theme");
+  } else {
+    document.documentElement.setAttribute("data-theme", "light-theme");
+    
+    localStorage.setItem("theme", "light-theme");
+  }
+}
+
+const currentTheme = localStorage.getItem("theme");
+
+if (currentTheme) {
+  
+  document.documentElement.setAttribute("data-theme", currentTheme);
+
+  if (currentTheme === "dark-theme") {
+    themeToggle.checked = true;
+  }
+}
+
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+}
+    </script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+  </div>
+</body>
+</html>
