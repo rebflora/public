@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample</title>
+    <title>Sample-4</title>
     <link rel="icon" href="#" type="image/png">
     <style>
 :root {
@@ -58,7 +58,7 @@ li {
 
   header {
     margin: 0;
-    padding: 2px; 
+    padding: 15px; 
     height: 14rem;
     border: 1px solid transparent;
     text-align: center;
@@ -216,6 +216,7 @@ footer {
   [data-theme="light-theme"] {
     --bg: var(--gold);
     --fontColor: var(--black);
+    --slider: var(--darkgold);
     --btnB: var(--gold);
     --btnColor: var(--black);
     --navFontColor: var(--darkgold);
@@ -226,6 +227,7 @@ footer {
   [data-theme="dark-theme"] {
     --bg: var(--black);
     --fontColor: var(--green);
+    --slider: var(gray);
     --btnB: var(--gray);
     --btnColor: var(--gold);
     --navFontColor: var(--gray);
@@ -253,14 +255,14 @@ footer {
   height: 34px;
   position: relative;
   width: 60px;
-  top: 3rem;
+  top: 3.3rem;
   left: 1.5rem;
 }
 .theme-switch input {
   display: none;
 }
 .slider {
-  background-color: #7f6b00;
+  background-color: var(--slider);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -268,7 +270,7 @@ footer {
   right: 0;
   top: 0;
   transition: 0.4s;
-  border-radius: 34px;
+  border-radius: 20px;
 }
 .slider:before {
   background-color: var(--btnColor);
@@ -282,9 +284,11 @@ footer {
   border-radius: 50%;
   border: 2px solid var(--btnB);
 }
+
 input:checked + .slider {
   background-color: #7f7f7f;
 }
+
 input:checked + .slider:before {
   transform: translateX(26px);
 }
@@ -294,8 +298,6 @@ input:checked + .slider:before {
 
 </head>
 <body>
-
-  <body class="light-theme">
 
     <div class="container">
     
@@ -366,7 +368,7 @@ function switchTheme(e) {
   }
 }
 
-themeToggle.addEventListener("change", switchTheme, false);
+themeToggle.addEventListener("change", switchTheme, true);
 
 const currentTheme = localStorage.getItem("theme") || "light-theme";
 
