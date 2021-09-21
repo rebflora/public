@@ -51,7 +51,7 @@ li {
   }
 
   header {
-    font-size: x-large;
+    font-size: 19px;
     margin: 0;
     padding: 2px; 
     height: 14rem;
@@ -167,7 +167,7 @@ li {
 main {
     line-height: 25px;
     margin: 0;
-    padding: 2rem;
+    padding: 0rem;
     padding-right: 4rem;
     background-color: #7f7f7f1f;
   }
@@ -255,7 +255,7 @@ footer {
     font-size: large;
     font-weight: bold;
     position: absolute;
-    margin: 24px 5px;
+    margin: 18px 5px;
     left: 1.5rem;
     height: 60px;
     width: 60px;
