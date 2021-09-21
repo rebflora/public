@@ -78,7 +78,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 1.5rem;
+    padding: 0rem 1.5rem;
   }
 
   .nav-background {
@@ -105,7 +105,7 @@ li {
 }
 
 .nav-item {
-  margin-left: 2rem;
+  margin-left: 0rem;
 }
   
 .nav-link {
@@ -181,20 +181,23 @@ main {
   }
 
 .section-1 {
-    text-align: center;
-    color: #4c9900;
-    padding: 5px;
-    overflow: hidden;
+  text-align: center;
+  color: var(--darkgreen);
+  margin-left: 40px;
+  width: 90%;
+  padding: 5px;
+  overflow: hidden;
  }
  
  .section-2 {
   text-align: left;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   font-size: large;
-  color: #326600;
-  margin: 0px;
+  color: var(--sect2Color);
+  margin-left: 40px;
+  width: 85%;
   padding: 1rem;
-  padding-right: 5px;
+  padding-right: 0rem;
   left: 0px;
   overflow: hidden;
 }
@@ -222,6 +225,7 @@ footer {
     --navAHoverColor: var(--green);
     --bodyLinkColor: var(--red);
     --bodyHoverColor: var(--black);
+    --sect2Color: var(--black);
   }
   [data-theme="dark-theme"] {
     --bg: var(--black);
@@ -230,8 +234,8 @@ footer {
     --btnColor: var(--gold);
     --navFontColor: var(--gray);
     --navAHoverColor: var(--gold);
-    --bodyLinkColor: var(--red);
-    --bodyHoverColor: var(--gold);
+    --bodyLinkColor: var(--purple);
+    --bodyHoverColor: var(--darkgold);
   }
 
   .clearfix::after {
@@ -339,8 +343,8 @@ input:checked + .slider:before {
       <p id="msg"></p>
     </section>
     <section class="section-2">
-      <p><b>This website has its style and script within the html. And its navbar content are external links because there is no folder content to refer to; no extra pages were created. If what you want is to be able to link pages within a website, then this website's code is not what you need. You need the code of the main page or home page.</b></p>
-      <p>The dark/light mode switcher style is different from the main page. If you want the main page, but with this dark/light mode switcher...now you want more, which entails you edit it, or pay a professional web developer/designer.</p>
+      <p><b>This website has its style and script within the html. And its navbar content are external links because there is no folder content to refer to; no extra pages were created. If what you want is to be able to link pages within a website, then this website's code is not what you need. You need the code of the home page.</b></p>
+      <p>The dark/light mode switcher style is different from the <a href="https://dev.rebekahflora.com">home page</a>. If you want the <a href="https://dev.rebekahflora.com">home page</a>, but with this dark/light mode switcher...now you want more, which entails you edit it, or pay a professional web developer/designer.</p>
          <br>
         <p style="font-size: 20px; font-weight: bold;">Cheers</p>
       </br>
@@ -357,20 +361,21 @@ input:checked + .slider:before {
 );
 
 function switchTheme(e) {
+  
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark-theme");
     
-    localStorage.setItem("theme", "dark-theme");
+    localStorage.setItem("style", "dark-theme");
   } else {
     document.documentElement.setAttribute("data-theme", "light-theme");
     
-    localStorage.setItem("theme", "light-theme");
+    localStorage.setItem("style", "light-theme");
   }
 }
 
-themeToggle.addEventListener("change", switchTheme, true);
+themeToggle.addEventListener("change", switchTheme, false);
 
-const currentTheme = localStorage.getItem("theme") || "light-theme";
+const currentTheme = localStorage.getItem("style") || "light-theme";
 
 if (currentTheme) {
   

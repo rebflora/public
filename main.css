@@ -5,6 +5,8 @@
     --gray: #696969;
     --purple: #990099;
     --red: #800000;
+    --darkgreen: #3f7f00;
+    --darkgold: #998100;
   }
 
   * {
@@ -27,6 +29,8 @@
   }
 
 li {
+    font-size: large;
+    line-height: 25px;
     margin-right: 3px;
     list-style-position: inside;
     list-style: none;
@@ -47,12 +51,14 @@ li {
   }
 
   header {
+    font-size: x-large;
     margin: 0;
     padding: 2px; 
     height: 14rem;
     border: 1px solid #000000;
     text-align: center;
     background-image: url("./images/Apple_shreds.jpg");
+    overflow: hidden;
   } 
 
   .site-logo {
@@ -64,7 +70,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 1.5rem;
+    padding: 0rem 1.5rem;
   }
 
   .nav-background {
@@ -91,7 +97,7 @@ li {
 }
 
 .nav-item {
-  margin-left: 2rem;
+  margin-left: 0rem;
 }
   
 .nav-link {
@@ -159,7 +165,7 @@ li {
 }
 
 main {
-    line-height: 23px;
+    line-height: 25px;
     margin: 0;
     padding: 2rem;
     padding-right: 4rem;
@@ -167,28 +173,34 @@ main {
   }
 
 .section-1 {
-    text-align: center;
-    color: #4c9900;
-    padding: 5px;
-    overflow: hidden;
+  text-align: center;
+  color: var(--darkgreen);
+  margin-left: 40px;
+  width: 90%;
+  padding: 5px;
+  overflow: hidden;
  }
 
 article {
-    padding: 1rem;
-    color: var(--articleFontColor);
-    overflow: hidden;
+  font-size: large;
+  color: var(--articleFontColor);
+  margin-left: 40px;
+  width: 85%;
+  padding: 1rem;
+  border-top: 1px solid #7f7f7f3d;
+  border-bottom: 1px solid #7f7f7f3d;
+  overflow: hidden;
  }
-
- 
  
  .section-2 {
   text-align: left;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   font-size: large;
-  color: #326600;
-  margin: 0px;
+  color: var(--sect2Color);
+  margin-left: 40px;
+  width: 85%;
   padding: 1rem;
-  padding-right: 5px;
+  padding-right: 0rem;
   left: 0px;
   overflow: hidden;
 }
@@ -214,8 +226,10 @@ footer {
     --btnFontColor: var(--black);
     --navFontColor: var(--gold);
     --navAHoverColor: var(--green);
+    --articleFontColor: var(--black);
     --bodyLinkColor: var(--red);
     --bodyHoverColor: var(--black);
+    --sect2Color: var(--black);
   }
   .dark-theme {
     --bg: var(--black);
@@ -225,8 +239,9 @@ footer {
     --navFontColor: var(--gray);
     --navAHoverColor: var(--gold);
     --articleFontColor: var(--purple);
-    --bodyLinkColor: var(--red);
-    --bodyHoverColor: var(--gold);
+    --bodyLinkColor: var(--purple);
+    --bodyHoverColor: var(--darkgold);
+    --sect2Color: var(--darkgold);
   }
 
   .clearfix::after {
@@ -240,7 +255,7 @@ footer {
     font-size: large;
     font-weight: bold;
     position: absolute;
-    margin: 5px 5px;
+    margin: 24px 5px;
     left: 1.5rem;
     height: 60px;
     width: 60px;
