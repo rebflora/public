@@ -216,7 +216,6 @@ footer {
   [data-theme="light-theme"] {
     --bg: var(--gold);
     --fontColor: var(--black);
-    --slider: var(--darkgold);
     --btnB: var(--gold);
     --btnColor: var(--black);
     --navFontColor: var(--darkgold);
@@ -227,7 +226,6 @@ footer {
   [data-theme="dark-theme"] {
     --bg: var(--black);
     --fontColor: var(--green);
-    --slider: var(gray);
     --btnB: var(--gray);
     --btnColor: var(--gold);
     --navFontColor: var(--gray);
@@ -261,8 +259,9 @@ footer {
 .theme-switch input {
   display: none;
 }
+
 .slider {
-  background-color: var(--slider);
+  background-color: var(--darkgold);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -272,6 +271,7 @@ footer {
   transition: 0.4s;
   border-radius: 20px;
 }
+  
 .slider:before {
   background-color: var(--btnColor);
   bottom: 4px;
