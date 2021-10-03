@@ -45,3 +45,14 @@ function closeMenu() {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }
+
+const navbar = document.querySelector('.navbar');
+let sticky = navbar.offsetTop;
+
+const navbarScroll = () => {
+    if (window.pageYOffset >= sticky) {
+        navbar.classList.add('sticky')
+    } else {navbar.classList.remove('sticky')
+    }
+};
+window.onscroll = navbarScroll;
