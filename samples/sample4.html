@@ -140,9 +140,9 @@ li {
   height: 40px;
   width: 100%;
   border-bottom: 1px solid #7f6c001f;
-  background-color: #7f6c0005;
+  background-color: var(--stickybg);
   overflow: hidden;
-  z-index: 1;
+  z-index: 2;
 }
 
  .sticky img {
@@ -281,7 +281,9 @@ footer {
     --bodyLinkColor: var(--red);
     --bodyHoverColor: var(--black);
     --sect2Color: var(--black);
+    --stickybg: var(--gold)
   }
+  
   [data-theme="dark-theme"] {
     --bg: var(--black);
     --fontColor: var(--green);
@@ -291,6 +293,7 @@ footer {
     --navAHoverColor: var(--gold);
     --bodyLinkColor: var(--purple);
     --bodyHoverColor: var(--darkgold);
+    --stickybg: var(--black)
   }
 
   .clearfix::after {
