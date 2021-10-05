@@ -63,7 +63,7 @@ li {
     height: 14rem;
     border: 1px solid transparent;
     text-align: center;
-    background-color: #7f6c002f;
+    background-color: #7f7f7f10;
     overflow: hidden;
   } 
 
@@ -92,7 +92,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0rem 1.5rem;
+    padding: 0 1rem 0rem 4.5rem;
   }
 
   .nav-background {
@@ -154,6 +154,16 @@ li {
   font-size: 15.5px;
 }
 
+  .sticky .theme-switch {
+   height: 28px;
+   top: 0;
+   margin-top: 10px;
+}
+
+  .sticky .slider:before {
+    height: 16px;
+  }
+
   .bar {
     display: block;
     width: 28px;
@@ -164,7 +174,7 @@ li {
     background-color: #998100;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 864px) {
   .nav-menu {
       position: fixed;
       right: -100%;
@@ -195,8 +205,13 @@ li {
   .hamburger {
       display: block;
       cursor: pointer;
+      margin-top: 15px;
+      z-index: 2;
   }
 
+  .logo{
+  margin-top: 15px;
+  }
 }
 
 .hamburger.active .bar:nth-child(2) {
@@ -212,8 +227,9 @@ li {
 }
 
 main {
+  max-width: 900px;
     line-height: 23px;
-    margin: 0;
+    margin: 1rem auto;
     padding: 0rem;
     padding-right: 4rem;
     background-color: #7f7f7f1f;
@@ -294,10 +310,12 @@ footer {
 .theme-switch {
   display: inline-block;
   height: 34px;
-  position: relative;
+  position: absolute;
   width: 60px;
-  top: 3.4rem;
-  left: 1.5rem;
+  top: 5px;
+  left: 0;
+  margin-left: 5px;
+  margin-top: 15px;
 }
 .theme-switch input {
   display: none;
@@ -347,6 +365,15 @@ input:checked + .slider:before {
     <header>
       <nav class="navbar nav-background">
         <div class="logo">
+          <div class="clearfix">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <div class="slider">
+                </div>
+              </label>
+            </div>
+          </div>
           Sample
           <span class= "site-name"><b>Sample</b></span>
         </div>  
@@ -365,15 +392,7 @@ input:checked + .slider:before {
       </div>
       </nav>
 
-      <div class="clearfix">
-        <div class="theme-switch-wrapper">
-          <label class="theme-switch" for="checkbox">
-            <input type="checkbox" id="checkbox" />
-            <div class="slider">
-            </div>
-          </label>
-        </div>
-      </div>
+     
       <h1>Exploration</h1>
       </header>
       
