@@ -76,6 +76,7 @@ li {
 
   .site-name {
     font-size: x-large;
+    font-weight: bold;
     transition: height 0.4s;
   }
 
@@ -92,26 +93,39 @@ li {
     position: fixed;
     top: 0;
     left: 0;
-    height: 48px;
+    height: 40px;
     width: 100%;
     border-bottom: 1px solid transparent;
     background-color: #222;
     overflow: hidden;
     z-index: 1;
   }
-  
-    .sticky img {
-    height: 33px;
-    margin-top: 0;
+
+  .sticky .btn {
+    height: 29px;
+    margin-top: 7px;
   }
-    .sticky .nav-link {
+  
+  .sticky .site-logo {
+    margin-top: 5px;
+  }
+
+  .sticky .site-name {
+    font-size: 20px;
+  }
+  
+  .sticky img {
+    height: 36px;
+    margin-top: 0;
+   
+  }
+  .sticky .nav-link {
     height: 40px;
     font-size: 15.5px;
   }
 
-  .sticky .btn {
-    height: 29px;
-    margin-top: 15px;
+  .sticky .hamburger {
+    margin-top: 5px;
   }
 
   .hamburger {
@@ -143,8 +157,6 @@ li {
     background-color: black;
     text-decoration: underline;
 }
-
-.nav-link:visited
 
 .bar {
   display: block;
@@ -189,11 +201,11 @@ li {
     cursor: pointer;
     margin-top: 15px;
     z-index: 2;
-}
+ }
 
 .site-logo{
   margin-top: 15px;
-}
+ }
 
 }
 
