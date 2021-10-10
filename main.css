@@ -112,6 +112,8 @@ li {
 
   .sticky .site-name {
     font-size: 18px;
+    color: var(--green);
+    visibility: hidden;
   }
   
   .sticky img {
