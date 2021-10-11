@@ -88,48 +88,7 @@ li {
     padding: 0 1rem 0rem 4.5rem;
     background-color: transparent;
   }
-
-  .sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 40px;
-    width: 100%;
-    border-bottom: 1px solid transparent;
-    background-color: #222;
-    overflow: hidden;
-    z-index: 1;
-  }
-
-  .sticky .btn {
-    height: 29px;
-    margin-top: 7px;
-  }
   
-  .sticky .site-logo {
-    margin-top: 5px;
-  }
-
-  .sticky .site-name {
-    font-size: 18px;
-    color: var(--green);
-    visibility: hidden;
-  }
-  
-  .sticky img {
-    height: 36px;
-    margin-top: 0;
-   
-  }
-  .sticky .nav-link {
-    height: 45px;
-    font-size: 15.5px;
-  }
-
-  .sticky .hamburger {
-    margin-top: 5px;
-  }
-
   .hamburger {
     display: none;
   }
@@ -159,6 +118,47 @@ li {
     background-color: black;
     text-decoration: underline;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    background-color: #222;
+    overflow: hidden;
+    z-index: 1;
+}
+
+  .sticky .btn {
+    height: 29px;
+    margin-top: 7px;
+  }
+  
+  .sticky .site-logo {
+    margin-top: 5px;
+  }
+
+  .sticky .site-name {
+    font-size: 18px;
+    color: var(--green);
+    visibility: hidden;
+  }
+  
+  .sticky img {
+    height: 36px;
+    margin-top: 0;
+   
+  }
+  .sticky .nav-link {
+    height: 45px;
+    font-size: 15.5px;
+  }
+
+  .sticky .hamburger {
+    margin-top: 5px;
+  }
 
 .bar {
   display: block;
