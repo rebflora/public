@@ -207,11 +207,11 @@ li {
     cursor: pointer;
     margin-top: 15px;
     z-index: 2;
- }
+  }
 
-.site-logo{
+  .site-logo{
   margin-top: 15px;
- }
+  }
 
 }
 
